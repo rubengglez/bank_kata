@@ -1,9 +1,8 @@
 export default class AccountService {
-  deposit(): void {
-
+  deposit(_amount: number): void {
   }
 
-  withdraw(): void {
+  withdraw(_amount: number): void {
 
   }
 
