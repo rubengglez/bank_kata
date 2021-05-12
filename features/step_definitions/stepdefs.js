@@ -1,4 +1,3 @@
-const assert = require('assert');
 const sinon = require('sinon');
 const chai = require("chai");
 const sinonChai = require("sinon-chai");
@@ -13,8 +12,8 @@ let accountService;
 let outputService;
 
 Before(function () {
-  accountService = new AccountService()
   outputService = sinon.spy({ print: () => {} })
+  accountService = new AccountService(outputService)
 })
 
 Given('a client makes a deposit of {int} on {int}-{int}-{int}', function (amount, day, month, year) {
